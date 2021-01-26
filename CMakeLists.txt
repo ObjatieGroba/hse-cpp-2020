@@ -9,3 +9,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED on)
 
 add_subdirectory(sem1-2)
 add_subdirectory(sem3-4)
+add_subdirectory(sem5)
+add_subdirectory(sem6)
