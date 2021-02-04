@@ -53,7 +53,7 @@ void process() {
     auto it = m.find(3);
     it->second.second; // ??? WHY
 
-    std::map<int, Pair<int64_t, size_t>>::iterator::value_type ==
+    std::map<int, Pair<int64_t, size_t>>::iterator::value_type;
 }
 
 int main() {
