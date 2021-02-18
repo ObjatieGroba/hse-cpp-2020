@@ -7,6 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED on)
 
 #add_compile_options(-Wall -Wextra -Werror)
 
+add_compile_options(-fno-elide-constructors)
+
 add_subdirectory(sem1-2)
 add_subdirectory(sem3-4)
 add_subdirectory(sem5)
@@ -16,3 +18,4 @@ add_subdirectory(sem8)
 add_subdirectory(sem9)
 add_subdirectory(sem10)
 add_subdirectory(sem11)
+add_subdirectory(sem12)
