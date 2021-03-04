@@ -36,7 +36,13 @@ public:
     }
 
     Polynomial<T> operator+(const Polynomial<T> &other) const {
-        return *this;
+        Polynomial copy = *this;
+        copy.IncreaseDegree(std::max(copy.Degree(), other.Degree()));
+        for (size_t i = 0; i != std::max(copy.Degree(), other.Degree()) + 1; ++i) {
+            copy.GetAt(i) += other[i];
+        }
+        copy.DecreaseDegree();
+        return copy;
     }
 
     friend Polynomial operator-(const Polynomial &l, const Polynomial &r) {
@@ -48,8 +54,22 @@ public:
         return coefficients_.size() - 1;
     }
 
+    void IncreaseDegree(size_t degree) {
+        /// Resize vector
+    }
+
+    void DecreaseDegree() {
+        while (!coefficients_.empty() && coefficients_.back() == 0) {
+            coefficients_.pop_back();
+        }
+    }
+
     auto operator[](size_t point) const {
         // if (...)
+        return coefficients_[point];
+    }
+
+    auto& GetAt(size_t point) {
         return coefficients_[point];
     }
 
