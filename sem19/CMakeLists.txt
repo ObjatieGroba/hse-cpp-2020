@@ -1,0 +1,1 @@
+add_executable(sem19.a a.cpp)
