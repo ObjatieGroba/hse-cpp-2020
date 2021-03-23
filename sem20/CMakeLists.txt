@@ -1,0 +1,1 @@
+add_executable(sem20.a a.cpp)
